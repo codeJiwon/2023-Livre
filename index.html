@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="script.js"></script>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color:#e0fce5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  ul {
+  background-image: linear-gradient(130deg,#67bb78,#f4eb8a);
+  color: #FFF;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+  
+  textarea,
+  input[type="text"],
+  input[type="file"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #8EFFA5;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  iframe {
+    width: 100%;
+    min-height: 300px;
+    border: none;
+    margin-bottom: 20px;
+  }
+  
+  </style>
+</head>
+<body>
+  <ul>
+    <h1>리브르,Livre</h1>
+    <h4>책과 사람을 좋아하는 사람들을 위한 연합독서동아리</h4>
+  </ul>
+    <!-- 각 기수의 활동-->
+    <h2>기수별 활동</h2>
+    <iframe src="menu.html"></iframe>
+
+  <!-- 서평과 코멘트 -->
+  <h2>서평과 코멘트</h2>
+  <iframe src="review.html"></iframe>
+
+  <!-- 정기모임 공지 -->
+  <h2>정기모임 공지</h2>
+  <iframe src="notice.html"></iframe>
+
+  <!-- 사진 갤러리 -->
+  <h2>정기모임 갤러리</h2>
+  <iframe src="gallery.html"></iframe>
+
+  <!-- 이벤트 알림 -->
+  <h2>이벤트 알림</h2>
+  <iframe src="event.html"></iframe>
+
+</body>
+</html>
