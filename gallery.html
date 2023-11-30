@@ -2,16 +2,16 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-  <div>
-    <input type="file" id="photoInput" accept="image/*">
-    <button onclick="uploadPhoto()">사진 업로드</button>
+<body>          
+  <div class="container">
+      <input type="file" id="photoInput" accept="image/*" onchange="loadFile(event)">
+      <label for="file"><button>사진 업로드</button></label>
   </div>
-  <div id="gallery">
-    <img id="selectedImage" src="" alt="선택된 이미지" />
+  <div class="gallery" id="imgBox">
+    <img id="selectedImage" src="" alt="선택된 이미지"/>
   </div>
 </body>
-</html>
-
+</html> 

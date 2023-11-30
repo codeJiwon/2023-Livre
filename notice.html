@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="notice.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <div>
@@ -10,6 +11,10 @@
     <textarea id="noticeContent" placeholder="공지 내용"></textarea>
     <button onclick="postNotice()">공지 작성</button>
   </div>
-  <div id="noticeList"></div>
+  <div id="noticeList">
+    <div class="container">
+      <div id="noticesContainer"></div>
+    </div> 
+  </div>
 </body>
 </html>
