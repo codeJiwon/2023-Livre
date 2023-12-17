@@ -5,6 +5,7 @@ html {
     height: 100%;
     padding: 0;
     margin: 0;
+    background-color: #dbdfb7;
 }
 body::-webkit-scrollbar {
     display: none;
@@ -203,7 +204,7 @@ content {
 .main_text h1 {
     margin: 0 0 5vh;
     color: #939A54;
-    font-size: 45vh;
+    font-size: 40vh;
     font-family: 'Capriola', sans-serif;
     line-height: 100%;
     text-shadow: 3px 3px 5px #646939; 
@@ -238,12 +239,17 @@ content {
 .information h1 {
     margin: 10vh 0 1vh;
     font-size: 20vh;
+    color: #646939;
     font-family: 'Gowun Dodum', sans-serif;
 }
 .information p {
     margin: 1vh 0 3vh 0;
     font-size: 4vh;
     font-family: 'Gowun Dodum', sans-serif;
+}
+.information p b{
+    font-size: 5vh;
+    color: #646939;
 }
 .information p a {
     font-size: 3vh;
