@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>SSR</title>
+    <title>Livre</title>
     <meta property="og:url" content="http://ssr.kro.kr/">
     <meta property="og:title" content="독서동아리">
     <meta property="og:type" content="website">
@@ -51,7 +51,7 @@
           <h1>Livre</h1>
         </section>
         <div class="apply">
-          <button class="button" onclick="location.href='/write'"><b> 2019 SSR 지원하기 </b></button>
+          <button class="button" onclick="location.href='/write'"><b> Livre 4기 지원하기 </b></button>
 
         </div>
 
@@ -59,7 +59,7 @@
       <a id="about"></a>
       <div class="information">
 
-        <h1>About</h1>
+        <h3 class="about">About</h3>
         <p>
           <br><b>리브르(Livre)</b>는 책과 사람을 좋아하는 사람들을 위한 연합독서동아리입니다.
           <br>
@@ -70,17 +70,21 @@
           <br>매달 첫째주 토요일에 정기모임이 진행되며, 장소는 웹페이지에 공지됩니다.
           <br>정기모임에서 발생한 비용을 n분의 1하는 것 외에는 비용이 발생하지 않습니다.
           <br>
-          <a id="award"></a>
           <br>열정적으로 독서하며 생각을 나누고 친목을 다질 차기 부원들에게 환영인사를 보냅니다!
         </p>
-        <iframe src="review.html"></iframe>
-        <div class="clear"></div>
+        </div>
+        <div>
+        <section class="review">
+          <h3>Review</h3>
+          <iframe src="review.html"></iframe>
+        </section>
       </div>
-      <section class="awards">
-        <h1 class="awards_title">Awards</h1>
-        <ul class="awards_list">
-        </ul>
+        <div>
+      <section class="gallery">
+        <h3>Gallery</h3>
+        <iframe src="gallery.html"></iframe>
       </section>
+        </div>
       <a id="member"></a>
       <div class="clear"></div>
       <div class="clear"></div>
@@ -88,8 +92,6 @@
         <!-- 멤버 소개-->
         <div class="member_title">
           <span class="team_member_title">TEAM MEMBER</span>
-          <div class="claer"></div>
-          <div class="claer"></div>
           <span class="team_member_sibo">독서동아리 부원</span>
           <div class="clear"></div>
         </div>
@@ -184,12 +186,12 @@
           </div>
         </div>
       </div>
-      <div class="connection">
+      <div class="notice">
         <iframe src="notice.html"></iframe>
       </div>
     </content>
     <div id="loading_page">
-      <img src="/images/loading.gif" alt="Loading">
+      <img src="/asset/loading.gif" alt="Loading">
     </div>
     <nav>
       <!--start navigation-->

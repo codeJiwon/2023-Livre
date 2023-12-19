@@ -52,6 +52,11 @@ input[type="file"] {
   margin-bottom: 10px;
 }
 
+.reviewButton,
+.commentButton {
+  justify-content: flex-end;
+}
+
 button {
   background-color: #BEDB9E;
   color: white;

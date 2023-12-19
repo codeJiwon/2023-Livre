@@ -1,16 +1,48 @@
-var photoInput = document.getElementById("photoInput");
-var selectedImage = document.getElementById("selectedImage");
-var imgBox = document.getElementById("imgBox");
+// Get the DOM elements for the image carousel
+const wrapper = document.querySelector(".wrapper"),
+  carousel = document.querySelector(".carousel"),
+  images = document.querySelectorAll("img"),
+  buttons = document.querySelectorAll(".button");
 
-var loadFile = function (event) {
-  selectedImage.src = URL.createObjectURL(event.target.files[0]);
+let imageIndex = 1,
+  intervalId;
+
+// Define function to start automatic image slider
+const autoSlide = () => {
+  // Start the slideshow by calling slideImage() every 2 seconds
+  intervalId = setInterval(() => slideImage(++imageIndex), 2000);
+};
+// Call autoSlide function on page load
+autoSlide();
+
+// A function that updates the carousel display to show the specified image
+const slideImage = () => {
+  // Calculate the updated image index
+  imageIndex =
+    imageIndex === images.length
+      ? 0
+      : imageIndex < 0
+      ? images.length - 1
+      : imageIndex;
+  // Update the carousel display to show the specified image
+  carousel.style.transform = `translate(-${imageIndex * 100}%)`;
 };
 
-// 파일 선택이 변경되었을 때의 이벤트를 감지하여 실행
-photoInput.addEventListener("change", loadFile);
+// A function that updates the carousel display to show the next or previous image
+const updateClick = (e) => {
+  // Stop the automatic slideshow
+  clearInterval(intervalId);
+  // Calculate the updated image index based on the button clicked
+  imageIndex += e.target.id === "next" ? 1 : -1;
+  slideImage(imageIndex);
+  // Restart the automatic slideshow
+  autoSlide();
+};
 
-// 사진 업로드 버튼을 눌렀을 때의 이벤트를 감지하여 실행
-document.querySelector("button").addEventListener("click", function () {
-  imgBox.style.backgroundImage = `url(${selectedImage.src})`;
-  imgBox.style.backgroundSize = "cover";
-});
+// Add event listeners to the navigation buttons
+buttons.forEach((button) => button.addEventListener("click", updateClick));
+
+// Add mouseover event listener to wrapper element to stop auto sliding
+wrapper.addEventListener("mouseover", () => clearInterval(intervalId));
+// Add mouseleave event listener to wrapper element to start auto sliding again
+wrapper.addEventListener("mouseleave", autoSlide);

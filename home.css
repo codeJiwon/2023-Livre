@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 100%;
     z-index: 99;
-    background: #000000; 
+    background: #dbdfb7; 
 }
 #loading_page img {
     position: absolute;
@@ -193,6 +193,7 @@ content {
     flex-direction: column;
     justify-content: center;
 }
+
 .main_text p {
     width: 100%;
     min-width: 100%;
@@ -232,18 +233,24 @@ content {
 .information {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 100%;
-    height: 175vh
+    height: 100%
 }
-.information h1 {
-    margin: 10vh 0 1vh;
-    font-size: 20vh;
+.information h3 {
+    margin: 10vh 0 0;
+    font-size: 15vh;
     color: #646939;
+    font-family: 'Gowun Dodum', sans-serif;
+    margin-bottom: 0;
+}
+
+.information br {
+    margin: 0 0 1vh;
+    font-size: 10vh;
+    color: #000000;
     font-family: 'Gowun Dodum', sans-serif;
 }
 .information p {
-    margin: 1vh 0 3vh 0;
     font-size: 4vh;
     font-family: 'Gowun Dodum', sans-serif;
 }
@@ -252,71 +259,34 @@ content {
     color: #646939;
 }
 .information p a {
-    font-size: 3vh;
+    font-size: 100px;
     font-family: 'Gowun Dodum', sans-serif;
 }
-.information iframe{
+
+/*-----gallery-----*/
+.gallery {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    margin: 10vh 20vw;
-    width: 60vw;
-    height: 50vw; 
-}
-
-
-/*-----awards-----*/
-.awards {
-    height: 65vh;
-    background-size: cover;
-    background-position: center;
-    color: black;
-    overflow-y: scroll;
-    background-color:#aaa;
+    height: 100%;
+    width: 100%;
     /*--background-image: url('../images/award_page.jpg');--*/
 }
-.awards_title {
-    font-family: 'Chivo', sans-serif;
-    font-size: 75px;
-    color: white;
-}
-.awards_list {
-    list-style: none;
-    padding: 0;
-    height: 75vh;
-    margin: 0 25vw;
-}
-.awards_list li {
-    margin: 20px;
-    font-family: 'Jua', sans-serif;
-    font-size: 23px;
-    color: white;
-}
-.awards_list li a {
-    font-family: 'Jua', sans-serif;
-    font-size: 25px;
+
+.gallery h3 {
+    margin: 10vh 0 5vh;
+    font-size: 15vh;
+    color: #646939;
+    font-family: 'Gowun Dodum', sans-serif;
+    margin-bottom: 0;
 }
 
-
-
-/*-----awards scrollbar-----*/
-.awards::-webkit-scrollbar {
-    width: 20px;
+.gallery iframe {
+    height: 65vh;
+    width: 150vh;
+    background-size: cover;
+    background-position: center;
 }
-.awards::-webkit-scrollbar-button:end:increment,
-.awards::-webkit-scrollbar-button:start:decrement {
-    display: block;
-    width: 12px;
-    height: 12px;
-    background: url('') rgba(1, 122, 204, 1);
-}
-.awards::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, .2);
-}
-.awards::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, .6);
-}
-
 
 
 /*-----member-----*/
@@ -367,290 +337,135 @@ content {
     justify-content: center;
 }
 
+    /* review */
 
-
-/*-----connection-----*/
-.connection {
-    margin: 20vh 5vw 10vh;
-}
-.connection_title {
-    margin: 30vh 0 5vh;
-    font-size: 75px;
-    font-family: 'Gowun Dodum', sans-serif;
-}
-
-.connection img {
-    width: 15vw;
-    height: auto;
-    margin: 10vh 2.5vh;
-}
-footer {
+.review {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    bottom: 0;
+    justify-content: space-between;
+    align-items: center; 
     width: 100%;
-    height: 50px;
-    color: white;
-    background-image: linear-gradient(to bottom right, #017accfa, #014370fa )
-}
-footer .footer_instide {
-    width: 50vw;
-    height: 100px;
-}
-/*-----mobile view-----*/
-@media screen and (max-width: 1024px){
-    nav .size { 
-        min-height: 70px;
-        height: 10vh;
-        max-height: 70px;
-    }
-    nav .wrapper .top {
-        top: 3vh;
-        right: 7.5%;
-        font-family: 'Gowun Dodum', sans-serif;
-    }
-    nav .go_connection, nav .go_members, nav .go_awards, nav .go_about {
-        display: none;
-    }
-    nav .logo{
-        margin: 0.5vh;
-    }
-    nav .logo img {
-        width: 20vh;
-    }
-     
-    .main {
-        width: 100%;
-        height: 100vh;
-        min-height: 90vw;
-        background-image: url('../images/main_page_mobile.jpg');
-    }
-    .main_text p {
-        margin: 20vh 0 0;
-        font-size: 15vw;
-    }
-    .main_text h1 {
-        margin: 0 0 15vh;
-        font-size: 50vw;
-    }
-    .main button.button {
-        margin: 0 5vw 5vh;
-    }
-    .nav_wrapper_change {
-        background-color: #017acc;
-    }
-    .information {
-        height: 100vh;
-        min-height: 200vw;
-    }
-    .information h1 {
-        font-size: 75px;
-        margin: 5vh 0;
-    }
-    .information p {
-        font-size: 4vw;
-        margin: 0 0 5vh 0;
-    }
-    .information p a {
-        font-size: 3.7vw;
-    }
-    .information iframe{
-        margin: 0 5vw;
-        width: 90vw;
-        min-width: 30vh;
-        height: 90vw; 
-        max-height: 35vh; 
-    }
-    .awards {
-        height: 65vh;
-        background-image: url('../images/award_page_mobile.jpg')
-    }
-    .awards li {
-        font-size: 5vw;
-    }
-    .awards_list {
-        margin: 0;
-    }
-    .awards_list li {
-        margin: 5vh 7.5vw 0;
-    }
-    .awards_list li a {
-        font-size: 4.8vw;
-    }
-    .awards::-webkit-scrollbar {
-        width: 20px;
-    }
-    .member_title {
-        width: 100vw;
-        height: 40vw;
-    }
-    .member_title li {
-        font-size: 1vw;
-    }
-    .team_member_title {
-        font-size: 10vw;
-    }
-    .team_member_sibo {
-        font-size: 4vw;
-    }
-    .members img {
-        width: 60vw;
-    }
-    .members {
-        display: flex;
-        flex-direction: row;
-        padding: 75px 0 20px;
-        background: rgba(0, 0, 0, .03);
-        overflow-x: scroll;
-    }
-    .members::-webkit-scrollbar {
-        height: 17.5px;
-    }
-    .members::-webkit-scrollbar-button:end:increment,
-    .members::-webkit-scrollbar-button:start:decrement {
-        display: block;
-        width: 20px;
-        height: 12px;
-        background: rgba(1, 122, 204, 1);
-    }
-    .members::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, .03);
-    }
-    .members::-webkit-scrollbar-thumb {
-        background: rgba(1, 122, 204, 0.3);
-    }
-    .profile_end {
-        margin: 0;
-    }
-    .connection {
-        margin: 5vh 3vw 10vh;
-    }
-    .connection img {
-        width: 45vw;
-        height: auto;
-        padding: 0 3vw;
-        margin: 0;
-    }
-    .connection_title {
-        font-size: 15vw;
-    }
-    footer {
-        background-color: #017acc;
-    }
-    textarea,
-    input[type="text"],
-    input[type="file"] {
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-        font-family: 'Gowun Dodum', sans-serif;
-        font-size: 20px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-    .review-item {
-        display: flex;
-        flex-direction: column;
-        font-family: 'Gowun Dodum', sans-serif;
-        justify-content: center;
-        align-self: flex-end;
-    }
-    .textContent {
-        font-family: 'Gowun Dodum', sans-serif;
-    }
-
-    .commentInput {
-        width: 100%;
-        padding: 10px;
-        font-family: 'Gowun Dodum', sans-serif;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        margin-bottom: 10px;
-        align-self: flex-end; /* 맨 오른쪽 정렬을 위해 추가 */
-    }
-
-    button {
-        align-self: flex-end;
-        background-color: #BEDB9E;
-        color: white;
-        padding: 5px 10px;
-        font-family: 'Gowun Dodum', sans-serif;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    button:hover {
-    background-color: #D6DFCC;
-    }
-
-    iframe {
-    width: 100%;
-    min-height: 300px;
-    border: none;
-    margin-bottom: 20px;
-    }
-
-    ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    }
-
-    nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-    }
-
-    nav ul li a {
-    display: block;
-    padding: 10px;
-    background-color: #D6DFCC;
-    color: white;
-    text-decoration: none;
-    }
-
-    nav ul li a:hover {
-    background-color: #D6DFCC;
-    }
-
-    .emoticon-buttons {
-        display: flex;
-        justify-content: flex-start;
-    }
-
-
-    #noticesContainer {
-    margin-top: 20px;
-    }
-
-    .noticeTitle {
-    background-color: #092ED9;
-    color: #FFF;
-    padding: 10px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    }
-
-    .noticeContent {
-    display: none;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    }
-
-    .gallery {
-    background: #fff;
-    color: #fff;
-    background-size: cover;
-    max-width: 500px;
     height: 100%;
-    margin: auto;
-    }
+}
+
+.review h3 {
+    margin: 10vh 0 5vh;
+    font-size: 15vh;
+    color: #646939;
+    font-family: 'Gowun Dodum', sans-serif;
+    margin-bottom: 0;
+}
+
+
+.review iframe {
+    margin: 1vh 0 1vh;
+    height: 65vh;
+    width: 150vh;
+    background-size: cover;
+    background-position: center;
+}
+
+textarea,
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.reviewButton,
+.commentButton {
+    padding: 8px 20px;
+    margin-right: 0;
+    display: inline-block;
+}
+
+
+
+button {
+    background-color: #BEDB9E;
+    color: white;
+    padding: 8px 20px;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+background-color: #D6DFCC;
+}
+
+ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+nav ul li {
+display: inline-block;
+margin-right: 10px;
+}
+
+nav ul li a {
+display: block;
+padding: 10px;
+background-color: #D6DFCC;
+color: white;
+text-decoration: none;
+}
+
+nav ul li a:hover {
+background-color: #D6DFCC;
+}
+
+
+
+.emoticon-buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.notice iframe{
+    margin: 0 5vw;
+    width: 90vw;
+    min-width: 30vh;
+    height: 90vw; 
+    max-height: 35vh; 
+}
+
+#noticeInput,
+#noticeList {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+#noticesContainer {
+width: 100%;
+height: 100%;
+margin-top: 20px;
+}
+
+.noticeTitle {
+color: #FFF;
+padding: 10px;
+margin-bottom: 5px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.noticeContent {
+display: none;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-bottom: 10px;
 }
