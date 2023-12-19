@@ -282,8 +282,8 @@ content {
 }
 
 .gallery iframe {
-    height: 65vh;
-    width: 150vh;
+    height: 70vh;
+    width: 140vh;
     background-size: cover;
     background-position: center;
 }
@@ -365,6 +365,14 @@ content {
     background-position: center;
 }
 
+#reviewList{
+    font-size: 25px;
+}
+
+#commentList{
+    font-size: 25px;
+}
+
 textarea,
 input[type="text"],
 input[type="file"] {
@@ -433,19 +441,43 @@ background-color: #D6DFCC;
     justify-content: flex-start;
 }
 
-.notice iframe{
-    margin: 0 5vw;
-    width: 90vw;
-    min-width: 30vh;
-    height: 90vw; 
-    max-height: 35vh; 
-}
 
-#noticeInput,
-#noticeList {
+.notice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
     width: 100%;
     height: 100%;
-    margin-top: 20px;
+}
+.notice h3 {
+    margin: 10vh 0 5vh;
+    font-size: 15vh;
+    color: #646939;
+    font-family: 'Gowun Dodum', sans-serif;
+    margin-bottom: 0;
+}
+.notice iframe {
+    margin: 1vh 0 1vh;
+    height: 65vh;
+    width: 150vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#noticeList .notice-item p {
+    font-size: 25px;
 }
 
 #noticesContainer {
@@ -463,9 +495,10 @@ border-radius: 5px;
 }
 
 .noticeContent {
-display: none;
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 5px;
-margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
