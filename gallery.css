@@ -11,6 +11,7 @@ body {
   background: #939A54;
   background-size: cover;
     background-position: center;
+    border-radius: 12px;
 }
 .wrapper {
   display: flex;
@@ -68,10 +69,13 @@ i#next {
   object-fit: cover;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1300px) {
+  body {
+    height: 80vw;
+  }
   .wrapper {
     width: 80vw;
-    height: 160vw; /* 가로 폭을 뷰포트 너비의 80%로 설정 */
+    height: 120vw; /* 가로 폭을 뷰포트 너비의 80%로 설정 */
      /* 높이를 자동으로 조정하여 사진이 겹치지 않도록 함 */
   }
 
@@ -86,6 +90,6 @@ i#next {
 
   .carousel img {
     width: 100%; /* 부모 요소에 맞추어 이미지 크기 조정 */
-    height: 200%; /* 높이를 자동으로 조정하여 사진이 겹치지 않도록 함 */
+    height: 100%; /* 높이를 자동으로 조정하여 사진이 겹치지 않도록 함 */
   }
 }
