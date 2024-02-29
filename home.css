@@ -37,95 +37,6 @@ body::-webkit-scrollbar {
     left: 47vw;
     height: 6vh;
 }
-/*-----navigation-----*/
-nav {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    top: 0;
-    width: 100vw;
-    height: 70px;
-}
-nav .size {
-    display: flex;  
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-    height: 8vh;
-    min-height: 70px;
-}
-nav .wrapper {
-    width: 100vw;
-}
-nav .wrapper .navigation {
-    float: right;
-    top: 30px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.nav_wrapper_change {
-    background-image: linear-gradient(to bottom right, #017accfa, #014370fa);
-}
-nav .logo {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    left: 0;
-    top: 0;
-    margin: 5px 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-nav .logo img {
-    min-width: 175px;
-    width: 9vw;
-    background-position: center;
-}
-nav .nav_menu{
-    top: 25px;
-    font-size: 25px;
-    font-family: 'Gowun Dodum', sans-serif;
-    color: white;
-    text-decoration:none
-}
-nav .top {
-    position: fixed;
-    right: 440px;
-}
-nav .go_connection{
-    position: fixed;
-    right: 19px;
-}
-nav .go_members{
-    position: fixed;
-    right: 153px;
-}
-nav .go_awards{
-    position: fixed;
-    right: 270px;
-}
-nav .go_about{
-    position: fixed;
-    top: 25px;
-    right: 365px;
-}
-
-/*nav .line {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    top: 70px;
-    width: 100%;
-    height: 1px;
-    opacity: 1;
-    background-image: linear-gradient(to bottom right, #017accfa, #014370fa )
-}*/
-nav .hamburger{
-    opacity: 1;
-}
 
 
 
@@ -286,55 +197,6 @@ content {
     width: 140vh;
     background-size: cover;
     background-position: center;
-}
-
-
-/*-----member-----*/
-.member {
-    min-width: 1px;
-    font-family: 'Gowun Dodum', sans-serif;
-}
-.member_title {
-    color: black;
-    font-size: 50px;
-    font-family: 'Gowun Dodum', sans-serif;
-}
-.team_member_title {
-    font-size: 75px;
-    font-family: 'Gowun Dodum', sans-serif;
-}
-.team_member_sibo {
-    margin: 100vh 0 0;
-    font-size: 50px;
-    font-family: 'Chivo';
-}
-.members h2 {
-    padding: 2vh 0 0;
-    margin: 0;
-    color: #111111;
-    font-size: 30px;
-    font-family: 'Gowun Dodum', sans-serif;
-}
-.members h3 {
-    color: #777777;
-    padding: 1vh 0 2vh;
-    margin: 0;
-    font-size: 20px;
-    font-family: 'Gowun Dodum', sans-serif;
-}
-.members img {
-    width: 20vw;
-    min-width: 200px;
-    max-width: 500px;
-    height: auto;
-    padding: 2vh 2vh 0;
-}
-.profile_end {
-    margin: 0 40vw 0 0;
-}
-.profile_inside{
-    display: flex;
-    justify-content: center;
 }
 
     /* review */
@@ -501,4 +363,159 @@ border-radius: 5px;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+/* 데스크탑 화면에 대한 스타일
+@media (min-width: 1367px) {
+  /* 네비게이션 */
+  /* nav {
+    height: 70px;
+  }
+  nav .logo img {
+    width: 175px;
+  }
+  nav .nav_menu {
+    font-size: 25px;
+  }
+  nav .top {
+    right: 440px;
+  }
+  nav .go_notice {
+    right: 70px;
+  }
+  nav .go_gallery {
+    right: 153px;
+  }
+  nav .go_review {
+    right: 250px;
+  }
+  nav .go_about {
+    right: 350px;
+  }
+  /* 메인 텍스트 */
+  /* .main_text p {
+    margin: 15vh 0 0;
+    font-size: 10vh;
+  }
+  .main_text h1 {
+    font-size: 40vh;
+  } */
+  /* 버튼 */
+  /* .main button.button {
+    padding: 10px 50px;
+    font-size: 40px;
+  } */
+  /* 리뷰 및 공지사항 */
+  /* .review iframe,
+  .gallery iframe,
+  .notice iframe {
+    height: 65vh;
+    width: 150vh;
+  }
+} */ 
+
+/* 태블릿 화면에 대한 스타일 */
+/* @media (max-width: 1366px) {
+  네비게이션 */
+  /* nav {
+    height: auto;
+  }
+  nav .logo img {
+    width: 150px;
+  }
+  nav .nav_menu {
+    font-size: 20px;
+  }
+  nav .top,
+  nav .go_notice,
+  nav .go_gallery,
+  nav .go_review,
+  nav .go_about {
+    position: static;
+    right: auto;
+  }
+  /* 메인 텍스트 */
+  /* .main_text p {
+    margin: 10vh 0 0;
+    font-size: 7vh;
+  }
+  .main_text h1 {
+    font-size: 30vh;
+  }
+  /* 버튼 */
+  /* .main button.button {
+    padding: 10px 30px;
+    font-size: 30px;
+  } */
+  /* 리뷰 및 공지사항 */
+  /* .review iframe,
+  .gallery iframe,
+  .notice iframe {
+    height: 40vh;
+    width: 80vh;
+  }
+} */ 
+
+/* 모바일 화면에 대한 스타일 */
+@media (max-width: 915px) {
+  nav .size,
+  nav .wrapper,
+  nav .navigation,
+  nav .logo,
+  .mobile_menu {
+    display: flex;
+    width: 100px;
+    height: 70px;
+}
+  nav .hamburger {
+    display: inline-block;
+    opacity: 1;
+  }
+
+  /* 메인 텍스트 */
+  .main_text p {
+    margin: 13vh 0 0;
+    font-size: 5vh;
+  }
+  .main_text h1 {
+    font-size: 15vh;
+  }
+
+  #reviewList{
+    font-size: 20px;
+}
+
+#commentList{
+    font-size: 20px;
+}
+
+  .information p {
+    font-size: 20px;
+    margin: 0 5vh 5vh;
+  }
+
+  .information p b {
+    font-size: 25px;
+  }
+  .information h3,
+  .gallery h3,
+  .notice h3,
+  .review h3 {
+    font-size: 10vh;
+    margin: 14vh 0 0;
+
+  }
+  /* 버튼 */
+  .main button.button {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  /* 리뷰 및 공지사항 */
+  .review iframe,
+  .gallery iframe,
+  .notice iframe {
+    height: 700px;
+    width: 380px;
+    margin: 0 5vh 5vh;
+  }
 }

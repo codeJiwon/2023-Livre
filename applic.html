@@ -1,0 +1,74 @@
+<html lang="kr" xmlns="http://www.w3.org/1999.xhtml">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="applic.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Gowun+Dodum&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+    <body>
+    <div class="write">
+        <form action="/write" method="post">
+        <div class="write_title"><b>지원서</b></div>
+        <div class="write_content">
+            <div class="write_content_1">
+                <div class="write_input_box">
+                    <div class="write_input input-effect">
+                        <input name="name" placeholder="이름" placeholder="name" type="name" class="effect">
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <div class="write_input input-effect">
+                        <input name="email" placeholder="이메일" type="email" class="effect">
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <div class="write_input input-effect">
+                    <input name="member" class="effect" placeholder="학교/학과/학번" type="member" >
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                    </div>
+                    <div class="write_input input-effect">
+                        <input name="book" class="effect" placeholder="최근에 인상깊게 읽은 책과 이유" type="book" >
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+
+                </div>
+            </div>
+            <div class="write_content_2">
+                <select class="input_box class_box" name="class" type="class">
+                    <option value="<%= classNum %>" selected>면접 가능 시간</option>
+                    <option value="G1">17:00-17:30</option>
+                    <option value="U1">17:30-18:00</option>
+                    <option value="U2">18:00-18:30</option>
+                    <option value="H1">18:30-19:00</option>
+                    <option value="H2">19:00-19:30</option>
+                </select>
+            </div>
+            <div class="write_content_4">
+                <div name="write_len"> 
+                <textarea name="application" onkeyup="len_chack()"  placeholder="자기소개 작성란. 자기소개는 자유양식입니다." type="write" class="effect" id="content"></textarea>
+                </div>
+            </div>
+            <div class="write_content_5">
+            </div>
+            <div class="write_content_6">
+                <button class="button_1" name="button" type="submit" value="저장하기" <%= isBlocked ? 'disabled' : '' %>>저장하기</button>
+                <button class="button_2" name="button" type="submit" value="제출하기" <%= isBlocked ? 'disabled' : '' %>>제출하기</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

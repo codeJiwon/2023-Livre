@@ -1,100 +1,98 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <script src="script.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color:#FFF5ED;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px; 
-  }
-  
-  h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
-  }
+<html lang="kr">
 
-  h4 {
-    text-align: center;
-  }
+  <head>
+    <meta charset="UTF-8">
+    <title>Livre</title>
+    <meta property="og:url" content="http://ssr.kro.kr/">
+    <meta property="og:title" content="독서동아리">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://t1.daumcdn.net/cfile/tistory/99A1FC3B5C7B7B5E35">
+    <meta property="og:description" content="동아리 지원하러 가기">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Capriola&family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  ul {
-  background-image: linear-gradient(130deg,#67bb78,#f4eb8a);
-  color: #FFF;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-}
-  
-  textarea,
-  input[type="text"],
-  input[type="file"] {
-    width: 50%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #8EFFA5;
-    color: white;
-    padding: 5px 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  iframe {
-    width: 100%;
-    min-height: 300px;
-    border: none;
-    margin-bottom: 20px;
-  }
-  
-  </style>
-</head>
-<body>
-  <ul>
-    <h1>리브르,Livre</h1>
-    <h4>책과 사람을 좋아하는 사람들을 위한 연합독서동아리</h4>
-  </ul>
-    <!-- 각 기수의 활동-->
-    <h2>기수별 활동</h2>
-    <iframe src="menu.html"></iframe>
+    <script>
+      var burger = $('.hamburger');
 
-  <!-- 서평과 코멘트 -->
-  <h2>서평과 코멘트</h2>
-  <!--<div id="root"></div>-->
-  <iframe src="review.html"></iframe>
+      burger.each(function(index) {
+        var $this = $(this);
 
-  <!-- 정기모임 공지 -->
-  <h2>정기모임 공지</h2>
-  <iframe src="notice.html"></iframe>
+        $this.on('click', function(e) {
+          e.preventDefault();
+          $(this).toggleClass('active-' + (index + 1));
+        })
+      });
 
-  <!-- 사진 갤러리 -->
-  <h2>정기모임 갤러리</h2>
-  <iframe src="gallery.html"></iframe>
+    </script>
+    <script>
+      setTimeout(function() {
+        $('#loading_page').fadeOut();
+      }, 1500);
 
-  <!-- 이벤트 알림 -->
-  <h2>이벤트 알림</h2>
-  <iframe src="event.html"></iframe>
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-</body>
+  <body>
+    <content>
+      <!--main, information-->
+      <div class="main">
+
+        <div id="top"></div>
+        <section class="main_text">
+          <p><b>연합독서동아리</b></p>
+          <h1>Livre</h1>
+        </section>
+        <div class="apply">
+          <button class="button" onclick="location.href='applic.html'"><b> Livre 4기 지원하기 </b></button>
+
+        </div>
+
+      </div>
+      <a id="about"></a>
+      <div class="information">
+
+        <h3 class="about">About</h3>
+        <p>
+          <br><b>리브르(Livre)</b>는 책과 사람을 좋아하는 사람들을 위한 연합독서동아리입니다.
+          <br>
+          <br>동아리 부원들은 원하는 책을 선정해서 각자 원하는만큼 읽고
+          <br>주 3회 이상 읽은 분량 중에서 인상 깊은 구절과 서평을 웹페이지에 적습니다.
+          <br>다른 부원들의 서평에 자유롭게 코멘트를 남기셔도 좋습니다.
+          <br>
+          <br>매달 첫째주 토요일에 정기모임이 진행되며, 장소는 웹페이지에 공지됩니다.
+          <br>정기모임에서 발생한 비용을 n분의 1하는 것 외에는 비용이 발생하지 않습니다.
+          <br>
+          <br>열정적으로 독서하며 생각을 나누고 친목을 다질 차기 부원들에게 환영인사를 보냅니다!
+        </p>
+        </div>
+        <div>
+        <section class="review">
+          <h3>Review</h3>
+          <iframe src="review.html"></iframe>
+        </section>
+      </div>
+        <div>
+      <section class="gallery">
+        <h3>Gallery</h3>
+        <iframe src="gallery.html"></iframe>
+      </section>
+        </div>
+      <div class="notice">
+        <h3>Notice</h3>
+        <iframe src="notice.html"></iframe>
+      </div>
+    </content>
+    <div id="loading_page">
+      <img src="/asset/loading.gif" alt="Loading">
+    </div>
+  </body>
+
 </html>

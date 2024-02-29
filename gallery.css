@@ -56,14 +56,36 @@ i#next {
 }
 .image-container .carousel {
   display: flex;
+  flex-direction: row;
   height: 100%;
   width: 100%;
   transition: all 0.4s ease;
 }
 .carousel img {
-  height: 500px;
-  width: 1000px;
-  border-radius: 18px;
+  height: 200%;
+  width: 100%;
   border: 10px solid #fff;
   object-fit: cover;
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    width: 80vw;
+    height: 160vw; /* 가로 폭을 뷰포트 너비의 80%로 설정 */
+     /* 높이를 자동으로 조정하여 사진이 겹치지 않도록 함 */
+  }
+
+  .image-container {
+    width: 80vw;
+    height: 150vw; /* 높이를 자동으로 조정하여 사진이 겹치지 않도록 함 */
+  }
+
+  .carousel {
+    flex-direction: row; /* 사진들이 세로로 배치되도록 함 */
+  }
+
+  .carousel img {
+    width: 100%; /* 부모 요소에 맞추어 이미지 크기 조정 */
+    height: 200%; /* 높이를 자동으로 조정하여 사진이 겹치지 않도록 함 */
+  }
 }
