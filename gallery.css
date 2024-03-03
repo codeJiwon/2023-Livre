@@ -69,7 +69,7 @@ i#next {
   object-fit: cover;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   body {
     height: 80vw;
   }
